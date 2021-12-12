@@ -4,18 +4,28 @@
 Minimum operations using Python.
 """
 
+import math
+
+
+def factors(n):
+    """calculates the factors of n number"""
+    mylist = []
+    while n % 2 == 0:
+        mylist.append(2)
+        n = n / 2
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        while n % i == 0:
+            mylist.append(i)
+            n = n / i
+    if n > 2:
+        mylist.append(n)
+    return mylist
+
+
 def minOperations(n):
-    #check for possible minimum 
-    if n <= 1:
+    """calculate the minimum operations"""
+    if type(n) != int or n < 2:
         return 0
-
-        variable1, variable2, variable3 = n, 2, 0
-
-        for i in range(2, variable1):
-            if variable1 % variable2 == 0:
-                variable1 = variable1 / variable2
-                variable3 = variable3 + variable2
-            else:
-                variable2 = variable2 + 1
-                
-        return variable3
+    else:
+        numOperations = sum(factors(n))
+        return int(numOperations)
