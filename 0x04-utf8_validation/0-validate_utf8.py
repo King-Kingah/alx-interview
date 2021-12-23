@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+""" Represents a valid UTF-8 encoding. """
 
 def validUTF8(data):
     """
-    First we encode UTF-8
+    Encode UTF-8
     """
 
     n_bytes = 0
-    
+
     for num in data:
         bin_rep = format(num, '#010b')[-8:]
         if n_bytes == 0:
@@ -19,7 +20,7 @@ def validUTF8(data):
             if n_bytes == 1 or n_bytes > 4:
                 return False
         else:
-            if not (bin_rep[0] == '1' and bin_rep[1] =='0'):
+            if not (bin_rep[0] == '1' and bin_rep[1] == '0'):
                 return False
         n_bytes -= 1
 
