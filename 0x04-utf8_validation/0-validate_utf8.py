@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def validUTF8(data):
-    """First we encode UTF-8"""
+    """
+    First we encode UTF-8
+    """
+
     n_bytes = 0
     
     for num in data:
