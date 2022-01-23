@@ -14,7 +14,7 @@ def rotate_2d_matrix(matrix):
     for i in range(int(n / 2)):
         y = (n - i - 1)
         for j in range(i, y):
-            x = (n - i - j)
+            x = (n - 1 - j)
             # the number
             temp = matrix[i][j]
             # top for left
