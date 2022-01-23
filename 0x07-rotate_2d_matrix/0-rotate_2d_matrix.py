@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-#Python3 program to rotate a square matrix by 90 degree
+# Python3 program to rotate a square matrix by 90 degree
+
 
 def rotate_2d_matrix(matrix):
         n = len(matrix)
