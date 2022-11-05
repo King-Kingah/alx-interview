@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-'''
+"""
 function def pascal_triangle(n)
-'''
+"""
+
 
 def pascal_triangle(n):
+    """returns a list of lists of integers representing
+    the Pascal’s triangle of n"""
     # case 1: n less than 0
     if n <= 0:
         return []
@@ -19,23 +22,3 @@ def pascal_triangle(n):
         row.append(1)
         triangle.append(row)
     return triangle
-
-
-
-''' Second approach using built-in function: factorial'''
-# from math import factorial
-#
-# # where n is the number of rows
-# def pascal_triangle(n):
-#     for i in range(n):
-#         # first loop for leading spaces
-#         for j in range(n - i + 1):
-#             print(end = " ")
-#
-#         # second loop for row i elements
-#         for j in range(i + 1):
-#             # define factorial formula: nCr = n!/((n-r)!*r!)
-#             print(factorial(i)//(factorial(j)*factorial(i - j)), end = " ")
-#
-#         # print each row in a new line
-#         print("\n")
