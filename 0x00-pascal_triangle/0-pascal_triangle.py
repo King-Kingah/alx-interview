@@ -15,6 +15,5 @@ def pascal_triangle(n):
         # print each row in a new line
         print("\n")
 
-
 # help(pascal_triangle)
-pascal_triangle(5)
+# pascal_triangle(5)
